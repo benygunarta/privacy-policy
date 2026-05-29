@@ -1,1 +1,302 @@
 
+# Menuliskan kode HTML ke sebuah file lokal agar dapat diunduh oleh pengguna
+html_content = """<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - PPPK Guru 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * { box-sizing: border-box; }
+        body { background-color: #f1f5f9; display: grid; gap: 30px; grid-template-columns: 1fr; margin: 0; min-height: 100vh; padding: 40px 0; place-items: center; }
+        .slide-container { align-items: center; background-color: #fff; border-radius: 4px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); display: flex; flex-direction: column; font-family: 'Inter', sans-serif; height: 720px; justify-content: center; overflow: hidden; padding: 60px 80px; position: relative; width: 1280px; }
+        .slide-container::before { content: ''; position: absolute; top: 0; right: 0; width: 300px; height: 300px; background: radial-gradient(circle, rgba(24, 90, 219, 0.05) 0%, transparent 70%); z-index: 0; }
+        .slide-container>* { position: relative; z-index: 1; }
+        .slide-container h1, .slide-container h2, .slide-container h3 { color: #0A1931; font-family: 'Urbanist', sans-serif; font-weight: 700; margin: 0; }
+        .slide-container p, .slide-container li, .slide-container .subtitle, .slide-container td, .slide-container th { color: #475569; font-family: 'Inter', sans-serif; font-size: 18px; line-height: 1.6; }
+        .slide-container h1 { font-size: 72px; letter-spacing: -1px; }
+        .slide-container .slide-title { font-size: 42px; font-weight: 700; margin-bottom: 40px; text-align: left; width: 100%; border-left: 8px solid #185ADB; padding-left: 20px; }
+        .slide-container .content-area { align-items: center; display: flex; flex-direction: column; flex-grow: 1; justify-content: center; width: 100%; }
+        .title-layout { text-align: center; }
+        .title-layout h1 { color: #185ADB; margin-bottom: 20px; }
+        .title-layout .subtitle { font-size: 24px; color: #64748b; }
+        .section-title-layout { text-align: center; }
+        .section-title-layout hr { width: 100px; border: 2px solid #FFC107; margin: 30px auto; }
+        .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; width: 100%; }
+        .two-column.tiled > div { background-color: #f8fafc; border-radius: 12px; padding: 40px; border-bottom: 4px solid #185ADB; }
+        .tiled-content { display: flex; gap: 30px; width: 100%; }
+        .tile { background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; flex: 1; padding: 30px; text-align: left; }
+        .tile .icon { color: #185ADB; font-size: 40px; margin-bottom: 20px; }
+        .bullet-list { list-style: none; padding: 0; width: 100%; }
+        .bullet-list li { position: relative; padding-left: 40px; margin-bottom: 20px; }
+        .bullet-list i { position: absolute; left: 0; color: #185ADB; font-size: 22px; top: 4px; }
+        .table-layout table { width: 100%; border-collapse: collapse; }
+        .table-layout th { background: #0A1931; color: white; padding: 20px; text-align: left; }
+        .table-layout td { padding: 18px 20px; border-bottom: 1px solid #e2e8f0; }
+        .chart-container { width: 100%; height: 350px; }
+        .area-chart-svg { width: 100%; height: 100%; overflow: visible; }
+        .highlight-numbers-layout .number { color: #185ADB; font-size: 140px; font-weight: 700; line-height: 1; }
+        .highlight-numbers-layout .label { font-size: 28px; font-weight: 600; color: #334155; }
+        .image-wrapper { border-radius: 8px; overflow: hidden; height: 100%; width: 100%; }
+        .image-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+        .timeline-layout { display: flex; justify-content: space-between; position: relative; width: 100%; padding-top: 50px; }
+        .timeline-line { background: #e2e8f0; height: 4px; left: 0; position: absolute; top: 50%; width: 100%; z-index: 0; }
+        .timeline-item { width: 22%; position: relative; text-align: center; }
+        .timeline-dot { background: #185ADB; border-radius: 50%; height: 20px; left: 50%; position: absolute; top: 50%; transform: translate(-50%, -50%); width: 20px; }
+        .timeline-content { margin-top: 40px; }
+        .slide-container.bleed-image-layout { display: grid; grid-template-columns: 1fr 1fr; padding: 0; align-items: start; }
+        .bleed-image-layout .content-container { padding: 80px; display: flex; flex-direction: column; justify-content: center; height: 100%; }
+        .bleed-image-layout img { width: 100%; height: 720px; object-fit: cover; }
+        .quote-layout blockquote { font-size: 38px; font-style: italic; color: #1e293b; border-left: 10px solid #FFC107; padding-left: 40px; }
+    </style>
+</head>
+<body>
+
+<div class="slide-container" id="slide1">
+    <div class="title-layout">
+        <p class="subtitle" style="font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Dokumen Privasi Resmi</p>
+        <h1>Kebijakan Privasi<br>PPPK Guru 2026</h1>
+        <p class="subtitle">Membangun Kepercayaan Digital bagi Masa Depan Pendidik Bangsa</p>
+        <div style="margin-top: 50px; font-size: 14px; color: #94a3b8;">Terakhir Diperbarui: 29 Mei 2026 • Versi 1.0</div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide2">
+    <div class="section-title-layout">
+        <h2>Filosofi & Komitmen</h2>
+        <hr>
+        <p style="max-width: 800px; margin: auto; font-size: 22px;">"Privasi bukan sekadar fitur, melainkan hak asasi setiap guru. Kami berkomitmen melindungi data Anda sesuai standar hukum tertinggi di Indonesia."</p>
+    </div>
+</div>
+
+<div class="slide-container" id="slide3">
+    <h2 class="slide-title">Kategorisasi Data yang Dikumpulkan</h2>
+    <div class="content-area">
+        <div class="two-column tiled">
+            <div>
+                <h3 style="color: #185ADB; margin-bottom: 15px;">Data Umum (Identitas)</h3>
+                <p>Informasi dasar yang Anda berikan saat pendaftaran untuk personalisasi pengalaman belajar Anda.</p>
+                <ul style="margin-top: 20px;">
+                    <li>Nama Lengkap & NIK</li>
+                    <li>Alamat Email & No. HP</li>
+                    <li>Instansi & Formasi Jabatan</li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="color: #185ADB; margin-bottom: 15px;">Data Spesifik (Sensitif)</h3>
+                <p>Data profesional yang diperlukan untuk akurasi simulasi ujian dan integrasi sistem pemerintah.</p>
+                <ul style="margin-top: 20px;">
+                    <li>Data NUPTK & Dapodik</li>
+                    <li>Sertifikat Pendidik (Serdik)</li>
+                    <li>Nilai Progres Simulasi</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide4">
+    <h2 class="slide-title">Tujuan Pemanfaatan Data</h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="tile">
+                <div class="icon"><i class="fa-solid fa-chart-line"></i></div>
+                <h3>Analitik Progres</h3>
+                <p>Menganalisis skor simulasi Anda untuk memberikan rekomendasi materi yang perlu dipelajari lebih dalam.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fa-solid fa-bell"></i></div>
+                <h3>Update Seleksi</h3>
+                <p>Mengirimkan notifikasi real-time terkait jadwal pendaftaran dan perubahan kebijakan PPPK 2026.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fa-solid fa-shield-check"></i></div>
+                <h3>Keamanan Sistem</h3>
+                <p>Mencegah akses ilegal dan mendeteksi aktivitas mencurigakan untuk melindungi integritas akun Anda.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide5">
+    <h2 class="slide-title">Prinsip Retensi Data Berkelanjutan</h2>
+    <div class="content-area">
+        <div class="chart-container">
+            <svg class="area-chart-svg" viewBox="0 0 1000 350">
+                <defs>
+                    <linearGradient id="areaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#185ADB; stop-opacity:0.4" />
+                        <stop offset="100%" style="stop-color:#185ADB; stop-opacity:0" />
+                    </linearGradient>
+                </defs>
+                <path d="M0,300 L250,150 L500,100 L750,250 L1000,300 L1000,350 L0,350 Z" fill="url(#areaGrad)" />
+                <polyline points="0,300 250,150 500,100 750,250 1000,300" fill="none" stroke="#185ADB" stroke-width="5" />
+                <circle cx="500" cy="100" r="8" fill="#fff" stroke="#185ADB" stroke-width="3" />
+                <text x="510" y="90" font-size="18" font-weight="bold">Puncak Data Aktif (Masa Ujian)</text>
+                <text x="10" y="340" font-size="14">Registrasi</text>
+                <text x="900" y="340" font-size="14">Penghapusan</text>
+            </svg>
+        </div>
+        <p style="font-style: italic; margin-top: 20px;">Kami hanya menyimpan data selama dibutuhkan. Setelah siklus seleksi 2026 selesai, data non-aktif akan dianonymized atau dihapus.</p>
+    </div>
+</div>
+
+<div class="slide-container" id="slide6">
+    <h2 class="slide-title">Transparansi Berbagi Data</h2>
+    <div class="content-area">
+        <div class="table-layout">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mitra / Pihak Ketiga</th>
+                        <th>Kategori Data</th>
+                        <th>Tujuan Kerjasama</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Google Firebase</td>
+                        <td>Data Teknis & ID Perangkat</td>
+                        <td>Push Notification & Analisis Crash Aplikasi</td>
+                    </tr>
+                    <tr>
+                        <td>Cloud Infrastructure (AWS)</td>
+                        <td>Seluruh Data Terenkripsi</td>
+                        <td>Penyimpanan Database & Hosting Server Aman</td>
+                    </tr>
+                    <tr>
+                        <td>Payment Gateway (Opsional)</td>
+                        <td>Data Transaksi</td>
+                        <td>Pemrosesan Pembayaran Fitur Premium</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide7">
+    <h2 class="slide-title">Hak Anda sebagai Subjek Data</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <ul class="bullet-list">
+                <li><i class="fa-solid fa-eye"></i> <strong>Hak Akses:</strong> Melihat data pribadi Anda yang kami simpan kapan saja melalui menu Profil.</li>
+                <li><i class="fa-solid fa-pen-to-square"></i> <strong>Hak Koreksi:</strong> Memperbaiki data yang salah atau tidak akurat terkait kualifikasi guru Anda.</li>
+                <li><i class="fa-solid fa-trash-can"></i> <strong>Hak Penghapusan:</strong> Meminta penghapusan akun dan seluruh riwayat belajar secara permanen.</li>
+            </ul>
+            <ul class="bullet-list">
+                <li><i class="fa-solid fa-file-export"></i> <strong>Portabilitas:</strong> Mendapatkan salinan data progres belajar Anda dalam format elektronik yang terstruktur.</li>
+                <li><i class="fa-solid fa-hand"></i> <strong>Hak Keberatan:</strong> Membatalkan persetujuan pemrosesan data untuk tujuan pemasaran.</li>
+                <li><i class="fa-solid fa-circle-info"></i> <strong>Hak Penjelasan:</strong> Mendapatkan informasi detail mengenai cara kami memproses data Anda.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide8">
+    <h2 class="slide-title">Kepatuhan Hukum & Regulasi</h2>
+    <div class="content-area">
+        <div class="two-column highlight-numbers-layout" style="align-items: center;">
+            <div style="text-align: center;">
+                <div class="number">100%</div>
+                <div class="label">Kepatuhan UU PDP No. 27/2022</div>
+            </div>
+            <div>
+                <h3>Standar Hukum Nasional</h3>
+                <p>Infrastruktur kami dirancang untuk mematuhi regulasi perlindungan data pribadi terbaru di Indonesia.</p>
+                <p style="margin-top: 20px;">Kami memastikan setiap langkah pemrosesan data memiliki dasar hukum (legal basis) yang sah dan terdokumentasi.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide9">
+    <h2 class="slide-title">Arsitektur Keamanan Lapis Ganda</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                <ul class="bullet-list">
+                    <li><i class="fa-solid fa-lock"></i> <strong>Enkripsi AES-256:</strong> Standar enkripsi militer untuk data sensitif di database.</li>
+                    <li><i class="fa-solid fa-key"></i> <strong>Multi-Factor Authentication:</strong> Perlindungan ekstra untuk akses administratif ke server.</li>
+                    <li><i class="fa-solid fa-vial"></i> <strong>Penetration Testing:</strong> Audit keamanan rutin untuk menemukan dan menutup celah kerentanan.</li>
+                    <li><i class="fa-solid fa-user-shield"></i> <strong>Privacy by Design:</strong> Privasi menjadi pertimbangan utama sejak tahap awal pengembangan kode.</li>
+                </ul>
+            </div>
+            <div class="image-wrapper">
+                <img src="http://googleusercontent.com/image_collection/image_retrieval/5859192466772515983" alt="Digital Security Shield">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide10">
+    <h2 class="slide-title">Siklus Hidup Data Anda</h2>
+    <div class="content-area">
+        <div class="timeline-layout">
+            <div class="timeline-line"></div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3 style="font-size: 20px; color: #185ADB;">Pendaftaran</h3>
+                    <p style="font-size: 14px;">Data identitas dikumpulkan dengan persetujuan Anda.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3 style="font-size: 20px; color: #185ADB;">Masa Belajar</h3>
+                    <p style="font-size: 14px;">Data diolah untuk memberikan analitik skor simulasi.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3 style="font-size: 20px; color: #185ADB;">Seleksi Berakhir</h3>
+                    <p style="font-size: 14px;">Data mulai dikompresi dan dikurangi (Data Minimization).</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3 style="font-size: 20px; color: #185ADB;">Penghapusan</h3>
+                    <p style="font-size: 14px;">Data dihapus permanen atau dianonymized sepenuhnya.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container bleed-image-layout" id="slide11">
+    <div class="content-container">
+        <h2 style="font-size: 48px; color: #185ADB; margin-bottom: 30px;">Fokus pada Karir, Serahkan Privasi kepada Kami</h2>
+        <p>Anda berjuang untuk mencerdaskan bangsa, kami berjuang untuk melindungi data Anda. Dengan PPPK Guru 2026, Anda bisa berlatih dengan tenang tanpa risiko kebocoran data.</p>
+        <p style="margin-top: 20px; font-weight: 600;">#PendidikAman #DataTerlindungi</p>
+    </div>
+    <img src="http://googleusercontent.com/image_collection/image_retrieval/11634839919233841182" alt="Indonesian Teacher using Tablet">
+</div>
+
+<div class="slide-container" id="slide12">
+    <h2 class="slide-title" style="text-align: center; border: none; padding: 0;">Pertanyaan & Dukungan</h2>
+    <div class="content-area">
+        <p style="font-size: 24px; text-align: center;">Tim Data Protection Officer (DPO) kami siap membantu Anda.</p>
+        <div style="margin-top: 50px; background: #f8fafc; padding: 40px; border-radius: 20px; width: 600px; text-align: center;">
+            <p><i class="fa-solid fa-envelope" style="color: #185ADB;"></i> <strong>Email:</strong> privacy@pppkguru2026.com</p>
+            <p style="margin-top: 15px;"><i class="fa-solid fa-globe" style="color: #185ADB;"></i> <strong>Website:</strong> www.pppkguru2026.com/privacy</p>
+            <p style="margin-top: 15px;"><i class="fa-solid fa-location-dot" style="color: #185ADB;"></i> <strong>Alamat:</strong> Gedung Guru Indonesia, Jakarta</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>"""
+
+# Simpan ke file .html
+file_name = "privacy_policy_pppk_2026.html"
+with open(file_name, "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print(f"File {file_name} berhasil dibuat.")
