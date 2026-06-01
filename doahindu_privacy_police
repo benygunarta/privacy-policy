@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kebijakan Privasi - Kumpulan Doa Hindu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #c2410c;
+            --primary-light: #fff7ed;
+            --accent: #ea580c;
+            --slate-800: #1e293b;
+            --slate-600: #475569;
+            --slate-100: #f1f5f9;
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: var(--slate-800);
+            line-height: 1.7;
+        }
+
+        /* Header Style */
+        header {
+            background: linear-gradient(135deg, #7c2d12 0%, #c2410c 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at top right, rgba(234, 88, 12c, 0.15), transparent 40%);
+        }
+
+        .header-tag {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 20px;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        header h1 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            color: #ffedd5;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .meta-info {
+            font-size: 0.9rem;
+            color: #ffedd5;
+        }
+
+        /* Container & Layout */
+        .container {
+            max-width: 900px;
+            margin: -40px auto 80px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .card {
+            background: white;
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        /* Section Typography */
+        section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        h2 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2 i {
+            color: var(--accent);
+            font-size: 1.3rem;
+        }
+
+        p, li {
+            color: var(--slate-600);
+            font-size: 105%;
+        }
+
+        /* Grid System for Lists */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .feature-card {
+            background-color: var(--slate-100);
+            padding: 24px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .feature-card h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--slate-800);
+        }
+
+        /* Table Styling */
+        .table-responsive {
+            overflow-x: auto;
+            margin-top: 20px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+            padding: 14px 18px;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 14px 18px;
+            border-bottom: 1px solid #e2e8f0;
+            background-color: white;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* List Items */
+        ul.custom-list {
+            list-style: none;
+        }
+
+        ul.custom-list li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
+        }
+
+        ul.custom-list li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #10b981;
+        }
+
+        /* Contact Box */
+        .contact-box {
+            background: var(--primary-light);
+            border: 1px dashed #fed7aa;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .contact-item:last-child { margin-bottom: 0; }
+
+        .contact-item i {
+            width: 36px;
+            height: 36px;
+            background-color: white;
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 0 20px 40px;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 640px) {
+            header h1 { font-size: 2rem; }
+            .card { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <span class="header-tag">Dokumen Resmi Aplikasi</span>
+        <h1>Kebijakan Privasi Kumpulan Doa Hindu</h1>
+        <p>Komitmen penuh dalam melindungi keamanan data privasi pengguna serta kenyamanan Anda dalam mempelajari tuntunan rohani.</p>
+        <div class="meta-info">
+            <i class="fa-regular fa-calendar-check"></i> Terakhir Diperbarui: 2 Juni 2026 &nbsp;|&nbsp; <i class="fa-solid fa-code-branch"></i> Versi 1.0 (Kepatuhan UU PDP)
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            
+            <section>
+                <h2><i class="fa-solid fa-circle-info"></i> Pengantar</h2>
+                <p>Selamat datang di aplikasi <strong>Kumpulan Doa Hindu</strong> (DOA HINDU LITE). Kami berkomitmen penuh untuk menyediakan ruang belajar spiritual yang aman, damai, dan tepercaya bagi seluruh umat Hindu. Kebijakan Privasi ini disusun secara transparan guna menjelaskan bagaimana kami mengelola informasi saat Anda menggunakan aplikasi kami, dengan kepatuhan penuh terhadap undang-undang perlindungan data yang berlaku di Indonesia.</p>
+            </section>
+
+            <section>
+                <h2><i class="fa-solid Earth-asia"></i> Data yang Kami Kumpulkan</h2>
+                <p>Aplikasi ini dikembangkan dengan prinsip minimalisasi data untuk kenyamanan optimal. Informasi yang kami proses meliputi:</p>
+                <div class="grid-cards">
+                    <div class="feature-card">
+                        <h3><i class="fa-solid fa-user-shield" style="color:var(--primary)"></i> Informasi Non-Personal</h3>
+                        <p>Aplikasi ini dapat digunakan secara anonim tanpa mewajibkan Anda melakukan registrasi, pengisian nama, ataupun login akun media sosial.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3><i class="fa-solid fa-star" style="color:var(--primary)"></i> Fitur Favorit (Lokal)</h3>
+                        <p>Data penandaan doa favorit disimpan secara internal di memori penyimpanan lokal (*Shared Preferences*) perangkat ponsel Anda sendiri.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3><i class="fa-solid fa-mobile-screen-button" style="color:var(--primary)"></i> Informasi Teknis</h3>
+                        <p>Model perangkat seluler dan versi sistem operasi (Android) yang digunakan demi kebutuhan optimalisasi tampilan teks keagamaan.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2><i class="fa-solid fa-gears"></i> Penggunaan Informasi Anda</h2>
+                <p>Informasi teknis dan preferensi lokal Anda murni digunakan untuk menunjang aktivitas keagamaan di dalam aplikasi:</p>
+                <ul class="custom-list" style="margin-top: 15px;">
+                    <li>Menyimpan riwayat bacaan atau penanda doa yang Anda sukai agar mudah diakses kembali kapan saja dan di mana saja.</li>
+                    <li>Menjamin teks aksara, pelafalan mantram, serta terjemahan dapat ter-render secara sempurna sesuai spesifikasi layar HP Anda.</li>
+                    <li>Menganalisis laporan kegagalan sistem (*crash logs*) demi memperbaiki bug secara berkala agar jalannya ibadah tidak terganggu.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2><i class="fa-solid fa-handshake"></i> Transparansi Pihak Ketiga</h2>
+                <p>Kami menjamin tidak ada penjualan atau penyalahgunaan data pribadi Anda. Kami hanya bekerja sama dengan penyedia layanan eksternal tepercaya untuk menunjang performa aplikasi:</p>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Layanan Mitra</th>
+                                <th>Kategori Data</th>
+                                <th>Tujuan Operasional</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Google Play Crashlytics</strong></td>
+                                <td>Data Laporan Eror Teknis</td>
+                                <td>Mendeteksi apabila aplikasi tiba-tiba menutup sendiri saat menampilkan teks doa.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Penyedia Iklan (Jika Ada)</strong></td>
+                                <td>Pengenal Iklan Anonim (Ad ID)</td>
+                                <td>Menampilkan iklan penunjang operasional aplikasi yang relevan dan ramah keluarga.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section>
+                <h2><i class="fa-solid fa-shield-halved"></i> Keamanan Data & Hak Pengguna</h2>
+                <p>Sesuai dengan ketentuan <strong>UU Perlindungan Data Pribadi (UU PDP) No. 27 Tahun 2022</strong>, kami memastikan hak spiritual dan privasi digital Anda terpenuhi:</p>
+                <ul class="custom-list" style="margin-top: 15px;">
+                    <li><strong>Tanpa Data Server:</strong> Karena kami tidak menyimpan data pribadi Anda di server terpusat, privasi data harian Anda sepenuhnya berada dalam kendali Anda sendiri.</li>
+                    <li><strong>Penghapusan Preferensi:</strong> Anda bisa menghapus seluruh riwayat doa favorit atau penanda teks secara instan cukup dengan membersihkan data aplikasi (*Clear Data*) melalui setelan ponsel Anda.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2><i class="fa-solid fa-envelope-open-text"></i> Layanan Pengaduan</h2>
+                <p>Jika Anda memiliki saran mengenai tampilan aplikasi, pertanyaan seputar privasi, atau masukan teks pelafalan doa Hindu, silakan hubungi tim pengembang:</p>
+                <div class="contact-box">
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Benygunarta@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-globe"></i>
+                        <span>https://benygunarta.github.io/privacy-policy/doa_hindu_privacy_policy.html</span>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tim Pengembang Kumpulan Doa Hindu. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
